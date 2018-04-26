@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Arizona Test</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assents/css/style.css">
+  </head>
+  <body>
+  <div class="container">
+    <h1>
+      Arizona Test
+      <a href="/country_list" class="btn btn-primary float-right mt-3">Get Code</a>
+    </h1>
+    
+    <table class="table table-striped tablesorter">
+      <thead>
+        <tr>
+          <tr>
+            <th>
+              Country Name
+              <!-- <a href="/country_list/SORT_ASC" class="btn btn-sm btn-primary">Order by ASC</a>
+              <a href="/country_list/SORT_DESC" class="btn btn-sm btn-primary">Order by DESC</a> -->
+            </th>
+            <th class="{sorter: false}">Country Code</th>
+          </tr>
+        </tr>
+      </thead>
+      <tbody>
+      <?php foreach ($country_list as $country) { ?>
+        <tr>
+          <td><?= $country['CountryName']; ?></td>
+          <td><?= $country['CountryCode']; ?></td>
+        </tr>
+      <?php } ?>
+      </tbody>
+    </table>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="assents/js/tablesorter/jquery.tablesorter.min.js"></script>
+    <script src="assents/js/tablesorter/scripts.js"></script>
+  </body>
+</html>
